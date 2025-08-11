@@ -28,40 +28,33 @@ public class EnterpriseDTO
     private String ultima_atualizacao;
 
     @Override
-    public String toString() {
-        return
-                "abertura='" + abertura + '\'' +
-                ", situacao='" + situacao + '\'' +
-                ", tipo='" + tipo + '\'' +
-                ", nome='" + nome + '\'' +
-                ", fantasia='" + fantasia + '\'' +
-                ", porte='" + porte + '\'' +
-                ", natureza_juridica='" + natureza_juridica + '\'' +
-                ", qsa=" + qsa +
-                ", logradouro='" + logradouro + '\'' +
-                ", numero='" + numero + '\'' +
-                ", complemento='" + complemento + '\'' +
-                ", municipio='" + municipio + '\'' +
-                ", bairro='" + bairro + '\'' +
-                ", uf='" + uf + '\'' +
-                ", cep='" + cep + '\'' +
-                ", email='" + email + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", data_situacao='" + data_situacao + '\'' +
-                ", motivo_situacao='" + motivo_situacao + '\'' +
-                ", cnpj='" + cnpj + '\'' +
-                ", ultima_atualizacao='" + ultima_atualizacao + '\'' +
-                ", status='" + status + '\'' +
-                ", efr='" + efr + '\'' +
-                ", situacao_especial='" + situacao_especial + '\'' +
-                ", data_situacao_especial='" + data_situacao_especial + '\'' +
-                ", atividade_principal=" + atividade_principal +
-                ", atividades_secundarias=" + atividades_secundarias +
-                ", capital_social='" + capital_social + '\'' +
-                ", simples=" + simples +
-                ", simei=" + simei +
-                ", extra=" + extra +
-                ", billing=" + billing;
+    public String toString()
+    {
+        return "\n--- Dados da Empresa ---\n" +
+                "CNPJ: " + cnpj + "\n" +
+                "Nome: " + nome + "\n" +
+                "Fantasia: " + fantasia + "\n" +
+                "Situação: " + situacao + " (" + motivo_situacao + ")\n" +
+                "Data da Situação: " + data_situacao + "\n" +
+                "Tipo: " + tipo + "\n" +
+                "Porte: " + porte + "\n" +
+                "Natureza Jurídica: " + natureza_juridica + "\n" +
+                "Abertura: " + abertura + "\n" +
+                "Última Atualização: " + ultima_atualizacao + "\n" +
+                "Capital Social: " + capital_social + "\n" +
+                "E-mail: " + email + "\n" +
+                "Telefone: " + telefone + "\n" +
+                "Endereço: " + logradouro + ", " + numero + (complemento != null && !complemento.isEmpty() ? " - " + complemento : "") + "\n" +
+                "Bairro: " + bairro + "\n" +
+                "Município: " + municipio + "/" + uf + "\n" +
+                "CEP: " + cep + "\n" +
+                "Atividade Principal: " + atividade_principal + "\n" +
+                "Atividades Secundárias: " + atividades_secundarias + "\n" +
+                "QSA: " + qsa + "\n" +
+                "Simples: " + (simples != null ? simples.isOptante() : "N/A") + "\n" +
+                "Simei: " + (simei != null ? simei.isOptante() : "N/A") + "\n" +
+                "Billing: " + (billing != null ? "Free=" + billing.isFree() + ", Database=" + billing.isDatabase() : "N/A") + "\n" +
+                "-------------------------";
     }
 
     private String status;

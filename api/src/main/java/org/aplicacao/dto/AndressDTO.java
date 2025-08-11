@@ -11,21 +11,22 @@ public class AndressDTO
           private String unidade;
 
     @Override
-    public String toString() {
-        return
-                "cep='" + cep + '\'' +
-                ", logradouro='" + logradouro + '\'' +
-                ", complemento='" + complemento + '\'' +
-                ", unidade='" + unidade + '\'' +
-                ", bairro='" + bairro + '\'' +
-                ", localidade='" + localidade + '\'' +
-                ", uf='" + uf + '\'' +
-                ", estado='" + estado + '\'' +
-                ", regiao='" + regiao + '\'' +
-                ", ibge='" + ibge + '\'' +
-                ", gia='" + gia + '\'' +
-                ", ddd='" + ddd + '\'' +
-                ", siafi='" + siafi + '\'';
+    public String toString()
+    {
+        return "\n--- Dados do Endereço ---\n" +
+                "CEP: " + cep + "\n" +
+                "Logradouro: " + logradouro + "\n" +
+                "Número: " + unidade + "\n" +
+                "Complemento: " + complemento + "\n" +
+                "Bairro: " + bairro + "\n" +
+                "Cidade: " + localidade + "/" + uf + "\n" +
+                "Estado: " + estado + "\n" +
+                "Região: " + regiao + "\n" +
+                "IBGE: " + ibge + "\n" +
+                "GIA: " + gia + "\n" +
+                "DDD: " + ddd + "\n" +
+                "SIAFI: " + siafi + "\n" +
+                "-------------------------";
     }
 
     private String bairro;
