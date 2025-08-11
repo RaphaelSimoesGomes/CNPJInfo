@@ -49,7 +49,6 @@ consultaCNPJ/
 - `servico/`: Contém as classes de serviço responsáveis por interagir com as APIs externas (`ApiServiceAndress.java` e `ApiServiceEnterprise.java`).
 - `pom.xml`: Arquivo de configuração do Maven, listando as dependências do projeto.
 
-
 ## Exemplo de Uso
 
 Ao executar a aplicação, ela fará uma consulta para o CNPJ `02.828.446/0001-34` (LITORAL LOCADORA) e exibirá os dados da empresa e do endereço no console, conforme o exemplo fornecido:
@@ -99,13 +98,10 @@ SIAFI: 3849
 
 ## APIs Utilizadas
 
-O projeto interage com as seguintes APIs (presumindo endpoints públicos ou mockados, pois não há configuração de URL explícita no código fornecido):
+O projeto interage com as seguintes APIs:
 
-- **API de Consulta CNPJ**: Utilizada para obter dados de empresas. (Ex: `ApiServiceEnterprise`)
-- **API de Consulta de Endereço (CEP)**: Utilizada para obter dados de endereço. (Ex: `ApiServiceAndress`)
-
-**Nota**: As URLs das APIs não estão configuradas no código-fonte fornecido, o que sugere que elas podem ser injetadas antes do tempo de execução ou que o projeto é parte de um sistema maior onde essas configurações são gerenciadas. Para um ambiente de produção, é crucial configurar corretamente os endpoints das APIs.
-
+- **API de Consulta CNPJ**: Utilizada para obter dados de empresas. A API utilizada é `https://receitaws.com.br/v1/cnpj/{cnpj}` do site [ReceitaWS](https://developers.receitaws.com.br/#/operations/queryCNPJFree).
+- **API de Consulta de Endereço (CEP)**: Utilizada para obter dados de endereço. A API utilizada é `viacep.com.br/ws/{cep}/json/` do site [ViaCEP](https://viacep.com.br/).
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00494c&height=120&section=footer"/>
 
